@@ -24,7 +24,7 @@ from aiogram.types import (
 
 load_dotenv()
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip() or "8924414679:AAF0MfGLxu9VXDZRBLhsHhJ3UEaV4CHoV-c" or "8924414679:AAF0MfGLxu9VXDZRBLhsHhJ3UEaV4CHoV-c"
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "").strip()
 DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat").strip()
 DB_PATH = os.getenv("DB_PATH", "inventory.db")
@@ -272,7 +272,7 @@ async def start(message: Message, state: FSMContext):
     role = "Администратор" if admin else "Пользователь"
     text = (
         "╔══════════════════════╗\n"
-        "      <b>INVENTORY STORE</b>\n"
+        "      <b>VapeNK #1</b>\n"
         "╚══════════════════════╝\n\n"
         "👋 Добро пожаловать!\n\n"
         "📦 Просматривайте каталог и выбирайте товары.\n"
@@ -608,7 +608,7 @@ async def requests_list(call: CallbackQuery):
 
 async def main():
     await init_db()
-    log.info("Inventory bot запущен")
+    log.info("VapeNK #1 запущен")
     try:
         await dp.start_polling(bot)
     finally:
